@@ -1,8 +1,4 @@
-# ✔ Use the official n8n Docker image
 FROM n8nio/n8n:latest
 
-# ✔ Expose the default port
+# Do not override CMD or ENTRYPOINT
 EXPOSE 5678
-
-# ✔ Start n8n (this works with this image)
-CMD ["n8n", "start"]
