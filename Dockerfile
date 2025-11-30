@@ -1,10 +1,8 @@
-FROM docker.n8n.io/n8nio/n8n:latest
+# ✔ Use the official n8n Docker image
+FROM n8nio/n8n:latest
 
-# Set required environment variables
-ENV N8N_PORT=5678
-ENV N8N_HOST=0.0.0.0
-ENV NODE_ENV=production
-
+# ✔ Expose the default port
 EXPOSE 5678
 
+# ✔ Start n8n (this works with this image)
 CMD ["n8n", "start"]
